@@ -2,5 +2,8 @@
 bin/
 gen/
 .classpath
-project.properties
+local.properties
 proguard-project.txt
+
+*.apk
+*.ap_
