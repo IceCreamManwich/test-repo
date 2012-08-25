@@ -1,10 +1,13 @@
+
 package com.msenn.icecreammanwich;
 
 import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
 
-public class MainActivity extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+
+public class MainActivity extends SherlockActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -12,9 +15,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		
+		MenuItem item = menu.add("Menu item");
+		item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+		
+		return super.onCreateOptionsMenu(menu);
+	}
+    
+    
 }
